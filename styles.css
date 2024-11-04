@@ -1,21 +1,18 @@
 :root {
-    --text-color: #8B0000;
+    --text-color: white;
     --nav-hover-color: rgba(255, 255, 255, 0.7);
     --transition-speed: 0.3s;
 }
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 
-
-/* Base styles */
-
+/* Index Styles */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     min-height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -25,3 +22,24 @@ body {
                  Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     line-height: 1.6;
 }
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+h1 {
+    color: var(--text-color);
+    font-size: 2.5rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
