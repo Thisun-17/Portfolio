@@ -68,4 +68,17 @@ h1 {
     opacity: 1;
     color: var(--nav-hover-color);
 }
-
+/* Social links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.social-links a {
+    color: var(--text-color);
+    transition: opacity var(--transition-speed);
+}
+.social-links a:hover {
+    opacity: 1;
+}
