@@ -82,3 +82,18 @@ h1 {
 .social-links a:hover {
     opacity: 1;
 }
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .vertical-nav {
+        width: 100%;
+        gap: 1rem;
+    }
+}
