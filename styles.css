@@ -170,3 +170,111 @@ h1 {
     background-color: var(--text-color);
     color: #000;
 }
+/* Media Queries */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column-reverse;
+        padding: 2rem 1rem;
+        gap: 2rem;
+    }
+
+    .about-title {
+        font-size: 2.5rem;
+    }
+
+    .horizontal-nav {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .horizontal-nav a {
+        font-size: 0.8rem;
+    }
+}
+
+/* Blog specific styles  */
+.blog-container {
+    max-width: 800px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.blog-header {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.blog-post {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+}
+
+.blog-post h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    color: var(--text-color);
+}
+
+.blog-post .post-meta {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.blog-post .category {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+}
+
+.post-content {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.8;
+}
+
+.post-content p {
+    margin-bottom: 1.5rem;
+}
+
+.post-content ul {
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+}
+
+.post-content li {
+    margin-bottom: 0.5rem;
+}
+
+.post-content pre {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1.5rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+}
+
+.post-content code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    color: #e6e6e6;
+}
+
+.blog-footer {
+    text-align: center;
+    padding: 3rem 0;
+    margin-top: 4rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
