@@ -25,4 +25,62 @@
                 <div class="post-meta">
                     <time datetime="2024-11-03">November 3, 2024</time>
                     <span class="category">Projects</span>
-        </div>   
+        </div>
+        <div class="post-content">
+            <p>Technologies Used:</p>
+            <ul>
+                <li>Frontend: Tkinter for GUI, Python</li>
+                <li>Backend: Python</li>
+                <li>Data Storage: JSON file system</li>
+                <li>Input Validation and Error Handling</li>
+            </ul>
+            <p>Here's a snippet of the core transaction handling code:</p>
+            <pre><code>
+def add_transaction():
+while True: 
+transaction_type = input("Enter the transaction type (Income/Expense): ").lower().strip()
+if not transaction_type:
+    print("Transaction type cannot be empty.")
+    continue
+if transaction_type not in ['income', 'expense']:
+    print("Invalid transaction type. Please enter 'Income' or 'Expense'.")
+    continue
+break
+
+while True:
+category = input("Enter the transaction category: ").lower().strip()
+if not category:
+    print("Category cannot be empty.")
+    continue
+if not category.isalpha():
+    print("Category name must consist of alphabetic characters only.")
+    continue
+break
+
+</code></pre>
+            <p>This project has been an excellent opportunity to combine various Python programming concepts into a practical application that can be used for real-world financial management.</p>
+        </div>
+    </article> 
+    <main class="blog-container">
+        <article class="blog-post">
+            <h2>Web Design and Development: SDG 15 - Life on Land</h2>
+            <div class="post-meta">
+                <time datetime="2024-06-28">June 28, 2024
+                </time>
+                <span class="category">Projects</span>
+            </div>
+            <div class="post-content">
+                <p>Technologies Used:</p>
+                <ul>
+                    <li>Frontend: HTML,CSS,JavaScript</li>
+                    <li>Design: Responsive Design,CSS Animations,Flexbox/Grid Layout</li>
+                    <li>Tools: W3C Validator,Version Control,Web Browsers</li>
+                    
+                </ul>
+                
+                <p>Project Reflection
+                    Working on this project enhanced my technical skills in web development while teaching valuable lessons about teamwork and project management. The experience of creating a website focused on SDG 15 allowed me to combine technical expertise with environmental awareness.
+                    
+                    Key learnings included effective time management, the importance of clear communication in team settings, and the value of responsive design in modern web development. The project also revealed areas for future improvement, particularly in estimation of task durations and early testing implementation.</p>
+            </div>
+        </article>  
