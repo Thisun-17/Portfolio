@@ -83,4 +83,61 @@ break
                     
                     Key learnings included effective time management, the importance of clear communication in team settings, and the value of responsive design in modern web development. The project also revealed areas for future improvement, particularly in estimation of task durations and early testing implementation.</p>
             </div>
-        </article>  
+        </article>
+        <main class="blog-container">
+            <article class="blog-post">
+                <h2>Building a Student Management System in Java</h2>
+                <div class="post-meta">
+                    <time datetime="2024-11-03">July 10, 2024</time>
+                    <span class="category">Projects</span>
+                </div>
+                <div class="post-content">
+                    <p>Technologies Used:</p>
+                    <ul>
+                        <li>Frontend: Java</li>
+                        <li>Data Storage: File I/O</li>
+                        <li>User Interface: Command Line Interface (CLI)</li>
+                        <li>Testing: Manual test cases with documentation</li>
+                    </ul>
+                    <p>Here's a snippet of the core student registration and management code:</p>
+                    <pre><code>
+private static void registerStudent() {
+if (studentCount < MAX_STUDENTS) {
+System.out.print("Enter student ID (e.g., 'w1234567'): ");
+String studentId = scanner.nextLine();
+studentIds[studentCount] = new Student(studentId);
+studentCount++;
+System.out.println("Student registered successfully.");
+} else {
+System.out.println("No available seats.");
+}
+}
+
+private static void addModuleMarks() {
+System.out.print("Enter student ID: ");
+String id = scanner.nextLine();
+boolean found = false;
+for (int i = 0; i < studentCount; i++) {
+if (studentIds[i].getStudentId().equals(id)) {
+    for (int j = 0; j < 3; j++) {
+        System.out.print("Enter mark for Module " + (j + 1) + ": ");
+        double mark = scanner.nextDouble();
+        studentIds[i].setModule(j, new Module("Module " + (j + 1), mark));
+    }
+    System.out.println("Module marks added successfully for student ID: " + id);
+    found = true;
+    break;
+}
+}
+if (!found) {
+System.out.println("Student not found.");
+}
+}
+
+</code></pre>
+                    <p>This project demonstrates practical application of Java programming concepts, data structures, and software design principles in creating a functional student management system.</p>
+                </div>
+            </article>
+
+    
+</main>  
