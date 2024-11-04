@@ -1,12 +1,14 @@
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
-
-
-/* Base styles */
 :root {
     --text-color: #8B0000;
     --nav-hover-color: rgba(255, 255, 255, 0.7);
     --transition-speed: 0.3s;
 }
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+
+/* Base styles */
+
 
 * {
     margin: 0;
