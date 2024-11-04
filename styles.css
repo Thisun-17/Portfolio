@@ -384,3 +384,240 @@ ul:not(.horizontal-nav) li {
     margin-bottom: 1rem;
 }
 
+/* Style all paragraphs except in the about section */
+p:not(.about-content p) {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Add space between blog post elements except the last one */
+.blog-post *:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+
+
+/* Style every odd blog post with a different background */
+.blog-post:nth-child(odd) {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(-10px);
+    padding-left: 3rem;
+}
+
+/* Style every even blog post */
+.blog-post:nth-child(even) {
+    background: rgba(0, 0, 0, 0.2);
+    transform: translateX(10px);
+    padding-right: 3rem;
+}
+
+/* Add special styling to first blog post */
+.blog-post:nth-child(1) {
+    border-left: 4px solid white;
+}
+
+/* Style every third heading differently */
+.blog-post:nth-child(3n) h2 {
+    color: white;
+}
+
+/* Add decorative elements to every fourth post */
+.blog-post:nth-child(4n)::before {
+    content: "★";
+    position: absolute;
+    left: -30px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.5rem;
+}
+
+/* Style list items in project sections */
+.post-content ul li:nth-child(odd) {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.post-content ul li:nth-child(even) {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Add special styling to every third list item */
+.post-content ul li:nth-child(3n) {
+    border-left: 2px solid white;
+    padding-left: 10px;
+}
+
+/* Style form inputs alternately */
+.form-group:nth-child(odd) input {
+    border-left: 3px solid white;
+}
+
+.form-group:nth-child(even) input {
+    border-right: 3px solid white;
+}
+
+/* Make sure blog posts have correct positioning for pseudo elements */
+.blog-post {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+/* Add hover effect to offset the transform */
+.blog-post:hover {
+    transform: translateX(0);
+}
+
+/* Add these animation keyframes at the beginning of your CSS file */
+@keyframes gentleFade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes subtleGlow {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+    }
+    50% {
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    }
+}
+
+/* Update your existing selectors with animations */
+
+/* Header animation */
+.about-header, .blog-header {
+    animation: gentleFade 1s ease-out;
+}
+
+/* Navigation animation */
+.horizontal-nav {
+    animation: gentleFade 0.8s ease-out;
+}
+
+/* About section animations */
+.about-container {
+    animation: gentleFade 1.2s ease-out;
+}
+
+/* Enhance your existing social links */
+.social-links a svg {
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover svg {
+    transform: scale(1.1);
+}
+
+/* Update your blog post styles */
+.blog-post {
+    animation: gentleFade 0.8s ease-out forwards;
+}
+
+/* Maintain your existing blog post styles while adding animation delays */
+.blog-post:nth-child(1) {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(-10px);
+    padding-left: 3rem;
+    animation-delay: 0.1s;
+}
+
+.blog-post:nth-child(2) {
+    background: rgba(0, 0, 0, 0.2);
+    transform: translateX(10px);
+    padding-right: 3rem;
+    animation-delay: 0.2s;
+}
+
+/* Enhance your contact button */
+.contact-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.contact-btn:hover::after {
+    left: 100%;
+}
+
+/* Enhance form inputs */
+input[type="text"],
+input[type="email"],
+textarea[name="message"] {
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea[name="message"]:focus {
+    animation: subtleGlow 2s infinite;
+    transform: translateY(-2px);
+}
+
+/* Your existing form group styles with added animation */
+.form-group:nth-child(odd) input {
+    border-left: 3px solid white;
+    animation: gentleFade 0.5s ease-out forwards;
+    animation-delay: 0.1s;
+}
+
+.form-group:nth-child(even) input {
+    border-right: 3px solid white;
+    animation: gentleFade 0.5s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+/* Update code block hover effect */
+.post-content pre {
+    transition: background-color 0.3s ease;
+}
+
+.post-content pre:hover {
+    background: rgba(0, 0, 0, 0.35);
+}
+
+/* Enhance list items */
+.post-content ul li {
+    transition: all 0.3s ease;
+}
+
+/* Keep your existing list styles while adding hover effect */
+.post-content ul li:nth-child(odd) {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.post-content ul li:nth-child(even) {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.post-content ul li:nth-child(3n) {
+    border-left: 2px solid white;
+    padding-left: 10px;
+}
+
+/* Accessibility consideration */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+
